@@ -1,0 +1,50 @@
+<h2>Add a product</h2>
+<form action="/api/products" method="post">
+    <label>Titulo</label>
+    <input name="title" required id="input-name">
+    <label>Descripcion</label>
+    <input name="description" required id="input-descr">
+    <label>Precio</label>
+    <input type="number" name="price" required id="input-precio">
+    <label>Codigo</label>
+    <input type="number" name="code" required id="input-codigo">
+    <label>Stock</label>
+    <input type="number" name="stock" required id="input-stock">
+    <label>Categoria</label>
+    <input name="category" required id="input-cat">
+    <label>Estado</label>
+    <input name="status" required id="input-status">
+    <input type="submit" id="form--submit">
+</form>
+<h2>Delete a product</h2>
+<form action="#" method="#">
+    <label>ID</label>
+    <input type="number" name="id" id="delete-input">
+    <input type="submit" id="form--submit--delete">
+</form>
+
+
+<div>
+    <h1>PRODUCTOS</h1>
+    <div id="container">
+    {{!-- {{productos.title}} --}}
+    {{#each productos}}
+        <div>  
+            <p>ID: {{this.id}}</p>
+            <p>Titulo: {{this.title}}</p>            
+            <p>Precio: {{this.price}}</p>
+           <p>---------------------------</p>
+        </div>
+    {{/each}}
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>
